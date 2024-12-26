@@ -11,8 +11,7 @@ const Customer = () => (
       <Container>
             <Row>
                 <Col xs={24} md={12} lg={8}>
-                <Title level={2} className='fw-bolder pb-5 '>What customers say about
-                GREEMIND?</Title>
+                <Title level={2} className='fw-bolder pb-5 '>What customers say about GREEMIND?</Title>
                 </Col>
             </Row>
             <Carousel data-bs-theme="dark">

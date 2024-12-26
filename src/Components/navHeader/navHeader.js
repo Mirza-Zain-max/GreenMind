@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Navbar, Nav, Container,  Offcanvas, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, Container, Offcanvas, NavDropdown, Dropdown } from 'react-bootstrap'
 import './navbar.css'
 import { Menu } from 'react-feather';
 import { Link, NavLink } from 'react-router-dom';
@@ -40,8 +40,8 @@ const NavHeader = () => {
     const navItems = [
         { name: 'Home', path: "/" },
         // { name: 'Blog', path: "/pages/blog" },
-        { name: 'About us', path: "/about"  },
-        { name: 'My Todos', path: "/todos" },
+        { name: 'About us', path: "/about" },
+        { name: 'My Todos', path: "/todo" },
     ]
 
     const [activeId, setActiveId] = useState(null);
@@ -71,20 +71,20 @@ const NavHeader = () => {
                     <NavDropdown title="Account" className=' d-flex mb-3 ms-3 my-sm-3 ' id="basic-nav-dropdown">
                         {!isAuth
                             ? <>
-                                <NavDropdown.Item>
+                                <Dropdown.Item as={"div"}>
                                     <Link className='ms-4 nav-link text-dark' to="/auth/login">Login</Link>
-                                </NavDropdown.Item>
-                                <NavDropdown.Item>
+                                </Dropdown.Item>
+                                <Dropdown.Item as={"div"}>
                                     <Link className='ms-4 nav-link  text-dark' to="/auth/register">Register</Link>
-                                </NavDropdown.Item>
+                                </Dropdown.Item>
                             </>
                             : <>
-                                <NavDropdown.Item>
+                                <Dropdown.Item as={"div"}>
                                     <Link className='ms-4 nav-link  text-dark' to="/dashboard">DashBoard</Link>
-                                </NavDropdown.Item>
-                                <NavDropdown.Item>
+                                </Dropdown.Item>
+                                <Dropdown.Item as={"div"}>
                                     <Link className='ms-4 nav-link  text-dark' onClick={handleLogout} >Logout</Link>
-                                </NavDropdown.Item>
+                                </Dropdown.Item>
                             </>
                         }
                     </NavDropdown>

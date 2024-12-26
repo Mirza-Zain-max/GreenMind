@@ -4,7 +4,6 @@ const AboutPage = () => {
   return (
     <main>
       <h1>
-
         this is about pages
       </h1>
     </main>

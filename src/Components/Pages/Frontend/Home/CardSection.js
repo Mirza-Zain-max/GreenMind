@@ -26,7 +26,7 @@ const CardSection = () => {
                         <p>
                             Easiest way to healthy life by buying your favorite plants
                         </p>
-                        <Link type='primary' className='btn btn-danger' to='/pages/about-us'>
+                        <Link type='primary' className='btn btn-danger' to='/about'>
                             Search <ArrowRightOutlined  />
                         </Link>
                     </Col>

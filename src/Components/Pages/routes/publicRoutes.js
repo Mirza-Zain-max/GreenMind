@@ -6,5 +6,4 @@ const PublicRoutes = () => {
   const { isAuth } = useAuthContext()
   return isAuth ? <Navigate to={'/'}/> : <Outlet/>
 }
-
 export default PublicRoutes
